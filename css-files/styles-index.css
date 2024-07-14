@@ -84,46 +84,40 @@ a{
     margin: 0 auto;
     color: var(--primary-color);
 }
-
-.hero-image{
-    height: 1080px;
-    width: 100%;
-    position: relative;
-    z-index: 1;
+.news-title{
+    height: auto;
+    margin: 20px auto;
+    text-align: center;
+    font-size:64px;
+    font-weight: bold;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    padding: 24px;
+    text-transform: uppercase;
+    color: var(--secondary-color);
 }
 
-.hero-image img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-
-.hero-text{
-    text-align:center;
-    position: absolute;
-    top:50%;
-    left:50%;
-    color:var(--primary-color);
-    transform: translate(-50%, -50%);
-}
-.hero-text h1{
-    margin-bottom: 5px;
-}
-
-.saturn-img{
-    height: 200px;
-    width:60%;
-    position: relative;
-    z-index: 1;
+.selector{
+    width: 60%; /* Adjust width as needed */
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
     margin: 0 auto; /* Center the container horizontally */
+    text-align: center;
+
 }
 
-.saturn-img img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+.selector label {
+    display: block;
+    margin: 10px auto; /* Center the container horizontally */
+    text-align: center;
+    color:var(--primary-color);
+}
+
+.selector button{
+    display: block;
+    margin: 20px auto; /* Center the container horizontally */
+    text-align: center;
 }
 
 .about-us-img{
@@ -141,18 +135,6 @@ a{
     object-position: center;
 }
 
-.news-title{
-    height: auto;
-    margin: 20px auto;
-    text-align: center;
-    font-size:64px;
-    font-weight: bold;
-    text-decoration: underline;
-    letter-spacing: 1px;
-    padding: 24px;
-    text-transform: uppercase;
-    color: var(--secondary-color);
-}
 article{
     width: 60%;
     height: auto;
@@ -181,53 +163,6 @@ article p{
     color: var(--secondary-color);
     line-height: 1.6;
     margin-bottom: 20px
-}
-
-
-.selector{
-    width: 60%; /* Adjust width as needed */
-    padding: 20px;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    margin: 0 auto; /* Center the container horizontally */
-    text-align: center;
-
-}
-
-.selector label {
-    display: block;
-    margin: 10px auto; /* Center the container horizontally */
-    text-align: center;
-    color:var(--primary-color);
-}
-
-.selector button{
-    display: block;
-    margin: 20px auto; /* Center the container horizontally */
-    text-align: center;
-}
-
-.rust-calculator{
-    width: 60%; /* Adjust width as needed */
-    padding: 20px;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    margin: 0 auto; /* Center the container horizontally */
-    text-align: center;
-
-}
-
-.rust-calculator label {
-    display: block;
-    margin: 10px auto; /* Center the container horizontally */
-    text-align: center;
-    color:var(--primary-color);
-}
-
-.rust-calculator button{
-    display: block;
-    margin: 20px auto; /* Center the container horizontally */
-    text-align: center;
 }
 
 footer{
