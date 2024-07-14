@@ -17,9 +17,13 @@ function rustcalculate() {
     const requiredGunpowder = gunpowderRequirements[explosive];
     const amountCanMake = Math.floor(gunpowder / requiredGunpowder);
 
-    if (explosive === "satchel") {
+    if(explosive === ""){
+        alert('Please enter a valid item.');
+    }
+    else if (explosive === "satchel") {
         alert(`With ${gunpowder} gunpowder, you can make approximately ${amountCanMake} ${explosive}(s).`);
-    }else{
+    }
+    else if(explosive === "c4" || explosive === "rocket" || explosive === "explo-ammo"){
         const sulferRequirments = {
             'explo-ammo':10* amountCanMake,
             'c4': 10 * amountCanMake,
