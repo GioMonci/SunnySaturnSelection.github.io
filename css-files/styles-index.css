@@ -114,6 +114,22 @@ a{
     color:var(--primary-color);
 }
 
+.iframe-container{
+    width: 60%; /* Adjust width as needed */
+    padding: 5px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    margin: 0 auto; /* Center the container horizontally */
+    text-align: center;
+}
+
+iframe{
+    width: 100%;
+    height: 600px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+}
+
 .selector button{
     display: block;
     margin: 20px auto; /* Center the container horizontally */
