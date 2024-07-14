@@ -49,6 +49,7 @@ header{
     align-items: center;
     justify-content: space-between;
 }
+
 a{
     text-decoration: none;
 }
@@ -92,7 +93,7 @@ a{
     font-weight: bold;
     text-decoration: underline;
     letter-spacing: 1px;
-    padding: 24px;
+    padding: 42px;
     text-transform: uppercase;
     color: var(--secondary-color);
 }
