@@ -125,7 +125,7 @@ a{
 }
 
 .iframe-container-wiki{
-    width: 80%; /* Adjust width as needed */
+    width: 70%; /* Adjust width as needed */
     height: auto;
     padding: 5px;
     border: 1px solid var(--primary-color);
