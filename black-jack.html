@@ -7,7 +7,8 @@
     <!-- link attribute -->
     <link rel="icon" type="image/x-icon" href="/images/favicon-32x32.png">
     <link rel="stylesheet" href="css-files/reset.css">
-    <link rel="stylesheet" href="css-files/styles-index.css">
+    <link rel="stylesheet" href="css-files/styles.css">
+    <script src="js-files/blk-jk.js"></script>
 
     <!-- Meta Tags -->
     <meta charset="UTF-8">
@@ -41,6 +42,23 @@
     <h1>Black Jack</h1>
 </div>
 
+<div class="game-window">
+    <div class="blk-jk-container">
+        <div class="dealer-display">
+            <p>Dealers Hand: </p>
+        </div>
+        <div class="player-display">
+            <p>Players Hand: </p>
+            <p>Money: </p>
+        </div>
+
+        <div class="actions">
+            <button onclick="hit()">Hit</button>
+            <button onclick="stand()">Stand</button>
+            <button onclick="doubledown()">Double Down</button>
+        </div>
+    </div>
+</div>
 
 <script>
     let icon = document.getElementById("icon");

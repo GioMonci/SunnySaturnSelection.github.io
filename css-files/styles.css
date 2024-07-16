@@ -115,6 +115,12 @@ a{
     color:var(--primary-color);
 }
 
+.selector button{
+    display: block;
+    margin: 20px auto; /* Center the container horizontally */
+    text-align: center;
+}
+
 .iframe-container{
     width: 60%; /* Adjust width as needed */
     height: auto;
@@ -140,12 +146,6 @@ iframe{
     height: 700px;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
-}
-
-.selector button{
-    display: block;
-    margin: 20px auto; /* Center the container horizontally */
-    text-align: center;
 }
 
 .about-us-img{
@@ -191,6 +191,40 @@ article p{
     color: var(--secondary-color);
     line-height: 1.6;
     margin-bottom: 20px
+}
+
+.game-window{
+    width: 60%; /* Adjust width as needed */
+    height: auto;
+    padding: 5px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    margin: 0 auto; /* Center the container horizontally */
+    text-align: center;
+}
+.blk-jk-container {
+    margin: 20px 0;
+}
+
+.dealer-display, .player-display {
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+
+}
+
+.actions button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+}
+
+.actions button:hover {
+    background-color: #0056b3;
 }
 
 footer{
