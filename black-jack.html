@@ -42,14 +42,18 @@
     <h1>Black Jack</h1>
 </div>
 
+    <button class="play-button" onclick="startGame()">Play</button>
+
 <div class="game-window">
-    <div class="blk-jk-container">
         <div class="dealer-display">
-            <p>Dealers Hand: </p>
+            <p>Dealers Hand: <span id="dealers-hand"></span></p>
+            <p>Dealers Total: <span id="dealers-total"></span></p>
         </div>
         <div class="player-display">
-            <p>Players Hand: </p>
-            <p>Money: </p>
+            <p>Players Hand: <span id="players-hand"></span></p>
+            <p>Players Total: <span id="players-total"></span></p>
+            <br>
+            <p>Money: <span id="players-money"></span></p>
         </div>
 
         <div class="actions">
@@ -57,7 +61,6 @@
             <button onclick="stand()">Stand</button>
             <button onclick="doubledown()">Double Down</button>
         </div>
-    </div>
 </div>
 
 <script>
