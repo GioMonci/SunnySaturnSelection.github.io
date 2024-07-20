@@ -1,79 +1,74 @@
 
-const suit = ["Sigma", "Alpha", "Jittleyang ", "Futuluhtoogan"];
-const rank = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A'];
-
-let playersMoney = 10;
-let dealersTotal = 0;
-let playersTotal = 0;
-let dealersDeck = ""
-let playersDeck = ""
+let gameState = {
+    suit: ["Sigma", "Alpha", "Jittleyang ", "Futuluhtoogan"],
+    rank: [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A'],
+    playersMoney: 10,
+    dealersTotal: 0,
+    playersTotal: 0,
+    dealersDeck: "",
+    playersDeck: ""
+}
 
 function startGame(){
     document.querySelector('.game-window').style.display = 'block';
     document.querySelector('.play-button').style.display = 'none';
-    document.getElementById('players-money').innerText = playersMoney;
-    document.getElementById('dealers-hand').innerText = dealersDeck;
-    document.getElementById('dealers-total').innerText = dealersTotal;
-    document.getElementById('players-hand').innerText = playersDeck;
-    document.getElementById('players-total').innerText = playersTotal;
+    upDateUI()
 }
 
 function hit(){
     dealersHand()
     playersHand()
-    document.getElementById('dealers-hand').innerText = dealersDeck;
-    document.getElementById('dealers-total').innerText = dealersTotal;
-
-    document.getElementById('players-hand').innerText = playersDeck;
-    document.getElementById('players-total').innerText = playersTotal;
-
-
+    upDateUI()
 }
+
 function dealersHand(){
     let randomSuit = Math.floor(Math.random()*3) // number 0-4
     let randomRank = Math.floor(Math.random()*12)
-    let cardD = suit[randomSuit]+ rank[randomRank];
-    dealersDeck += cardD + ", ";
-    if (typeof rank[randomRank] === 'string') {
+    let cardD = gameState.suit[randomSuit]+ gameState.rank[randomRank];
+    gameState.dealersDeck += cardD + ", ";
+    if (typeof gameState.rank[randomRank] === 'string') {
         // Convert face cards to their respective values
-        switch (rank[randomRank]) {
+        switch (gameState.rank[randomRank]) {
             case 'J':
             case 'Q':
             case 'K':
-                dealersTotal += 10;
+                gameState.dealersTotal += 10;
                 break;
             case 'A':
-                dealersTotal += 11; // Or handle Ace as 1 or 11 depending on your game rules
+                gameState.dealersTotal += 11;
                 break;
         }
     } else {
-        dealersTotal += rank[randomRank];
+        gameState.dealersTotal += gameState.rank[randomRank];
     }
-
 }
 
 function playersHand(){
     let randomSuit = Math.floor(Math.random()*3) // number 0-4
     let randomRank = Math.floor(Math.random()*12)
-    let cardP = suit[randomSuit]+ rank[randomRank];
-    playersDeck += cardP + ", "
-    if (typeof rank[randomRank] === 'string') {
+    let cardP = gameState.suit[randomSuit]+ gameState.rank[randomRank];
+    gameState.playersDeck += cardP + ", "
+    if (typeof gameState.rank[randomRank] === 'string') {
         // Convert face cards to their respective values
-        switch (rank[randomRank]) {
+        switch (gameState.rank[randomRank]) {
             case 'J':
             case 'Q':
             case 'K':
-                playersTotal += 10;
+                gameState.playersTotal += 10;
                 break;
             case 'A':
-                playersTotal += 11; // Or handle Ace as 1 or 11 depending on your game rules
+                gameState.playersTotal += 11;
                 break;
         }
     } else {
-        playersTotal += rank[randomRank];
+        gameState.playersTotal += gameState.rank[randomRank];
     }
 }
 
-function deckAdding(){
-
+function upDateUI(){
+    document.getElementById('players-money').innerText = gameState.playersMoney;
+    document.getElementById('dealers-hand').innerText = gameState.dealersDeck;
+    document.getElementById('dealers-total').innerText = gameState.dealersTotal;
+    document.getElementById('players-hand').innerText = gameState.playersDeck;
+    document.getElementById('players-total').innerText = gameState.playersTotal;
 }
