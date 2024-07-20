@@ -242,6 +242,9 @@ article p{
     background-color: #0056b3;
 }
 
+#restartBtn{
+    display: none;
+}
 footer{
     margin-top: auto;
     text-align: center;

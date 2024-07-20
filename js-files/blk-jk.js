@@ -1,6 +1,6 @@
 
 let gameState = {
-    suit: ["Sigma", "Alpha", "Jittleyang ", "Futuluhtoogan"],
+    suit: ["Sigma ", "Alpha ", "Jittleyang ", "Futuluhtoogan "],
     rank: [2, 3, 4, 5, 6, 7, 8, 9, 10, 'J', 'Q', 'K', 'A'],
     playersMoney: 10,
     dealersTotal: 0,
@@ -18,6 +18,8 @@ function startGame(){
 function hit(){
     dealersHand()
     playersHand()
+    upDateUI()
+    totalingCards()
     upDateUI()
 }
 
@@ -65,10 +67,56 @@ function playersHand(){
     }
 }
 
+function totalingCards() {
+    if (gameState.dealersTotal === 21 && gameState.playersTotal === 21) {
+        alert("It's a draw!");
+        endGame();
+    } else if (gameState.dealersTotal === 21) {
+        alert("Dealer has 21! Dealer wins!");
+        endGame();
+    } else if (gameState.playersTotal === 21) {
+        alert("Player has 21! Player wins!");
+        endGame();
+    } else if (gameState.dealersTotal > 21) {
+        alert("Dealer busts! Player wins!");
+        endGame();
+    } else if (gameState.playersTotal > 21) {
+        alert("Player busts! Dealer wins!");
+        endGame();
+    } else {
+        // Neither has 21 and neither has busted, game continues
+        upDateUI();
+    }
+}
+
+function stand(){
+    while (gameState.dealersTotal < 17) { // Example dealer rule: draw until 17 or higher
+        dealersHand();
+    }
+    upDateUI();
+    totalingCards();
+}
 function upDateUI(){
     document.getElementById('players-money').innerText = gameState.playersMoney;
     document.getElementById('dealers-hand').innerText = gameState.dealersDeck;
     document.getElementById('dealers-total').innerText = gameState.dealersTotal;
     document.getElementById('players-hand').innerText = gameState.playersDeck;
     document.getElementById('players-total').innerText = gameState.playersTotal;
+}
+
+function endGame(){
+    upDateUI();
+    document.querySelector('#restartBtn').style.display = 'inline';
+
+}
+
+function gameRestart(){
+    gameState.dealersTotal = 0;
+    gameState.playersTotal = 0;
+    gameState.dealersDeck = "";
+    gameState.playersDeck = "";
+    document.querySelector('.game-window').style.display = 'none';
+    document.querySelector('.play-button').style.display = 'block';
+    document.querySelector('#restartBtn').style.display = 'none';
+    upDateUI();
 }
