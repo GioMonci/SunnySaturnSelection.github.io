@@ -18,7 +18,6 @@ function startGame(){
 function hit(){
     dealersHand()
     playersHand()
-    upDateUI()
     totalingCards()
     upDateUI()
 }
@@ -69,23 +68,42 @@ function playersHand(){
 
 function totalingCards() {
     if (gameState.dealersTotal === 21 && gameState.playersTotal === 21) {
-        alert("It's a draw!");
         endGame();
+        setTimeout(alerts,1000)
+    }
+    else if(gameState.dealersTotal > 21 && gameState.playersTotal > 21){
+        endGame();
+        setTimeout(alerts,1000)
+    }else if (gameState.dealersTotal === 21) {
+        endGame();
+        setTimeout(alerts,1000)
+    } else if (gameState.playersTotal === 21) {
+        endGame();
+        setTimeout(alerts,1000)
+    } else if (gameState.dealersTotal > 21) {
+        endGame();
+        setTimeout(alerts,1000)
+    } else if (gameState.playersTotal > 21) {
+        endGame();
+        setTimeout(alerts,1000)
+    } else {
+        upDateUI();
+    }
+}
+
+function alerts(){
+    if (gameState.dealersTotal === 21 && gameState.playersTotal === 21) {
+        alert("It's a draw!");
+    } else if(gameState.dealersTotal > 21 && gameState.playersTotal > 21){
+       alert("Both player and dealer busts")
     } else if (gameState.dealersTotal === 21) {
         alert("Dealer has 21! Dealer wins!");
-        endGame();
     } else if (gameState.playersTotal === 21) {
         alert("Player has 21! Player wins!");
-        endGame();
     } else if (gameState.dealersTotal > 21) {
         alert("Dealer busts! Player wins!");
-        endGame();
     } else if (gameState.playersTotal > 21) {
         alert("Player busts! Dealer wins!");
-        endGame();
-    } else {
-        // Neither has 21 and neither has busted, game continues
-        upDateUI();
     }
 }
 
@@ -119,4 +137,18 @@ function gameRestart(){
     document.querySelector('.play-button').style.display = 'block';
     document.querySelector('#restartBtn').style.display = 'none';
     upDateUI();
+}
+
+function bet(){
+}
+
+function doubledown(){
+}
+
+function winMoney(){
+
+}
+
+function loseMoney(){
+
 }
