@@ -69,23 +69,23 @@ function playersHand(){
 function totalingCards() {
     if (gameState.dealersTotal === 21 && gameState.playersTotal === 21) {
         endGame();
-        setTimeout(alerts,1000)
+        setTimeout(alerts,500)
     }
     else if(gameState.dealersTotal > 21 && gameState.playersTotal > 21){
         endGame();
-        setTimeout(alerts,1000)
+        setTimeout(alerts,500)
     }else if (gameState.dealersTotal === 21) {
         endGame();
-        setTimeout(alerts,1000)
+        setTimeout(alerts,500)
     } else if (gameState.playersTotal === 21) {
         endGame();
-        setTimeout(alerts,1000)
+        setTimeout(alerts,500)
     } else if (gameState.dealersTotal > 21) {
         endGame();
-        setTimeout(alerts,1000)
+        setTimeout(alerts,500)
     } else if (gameState.playersTotal > 21) {
         endGame();
-        setTimeout(alerts,1000)
+        setTimeout(alerts,500)
     } else {
         upDateUI();
     }
@@ -125,7 +125,6 @@ function upDateUI(){
 function endGame(){
     upDateUI();
     document.querySelector('#restartBtn').style.display = 'inline';
-
 }
 
 function gameRestart(){
@@ -139,16 +138,6 @@ function gameRestart(){
     upDateUI();
 }
 
-function bet(){
-}
-
 function doubledown(){
-}
-
-function winMoney(){
-
-}
-
-function loseMoney(){
 
 }
