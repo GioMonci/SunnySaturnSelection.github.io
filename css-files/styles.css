@@ -131,16 +131,6 @@ a{
     text-align: center;
 }
 
-.iframe-container-wiki{
-    width: 70%; /* Adjust width as needed */
-    height: auto;
-    padding: 5px;
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    margin: 0 auto; /* Center the container horizontally */
-    text-align: center;
-}
-
 iframe{
     width: 100%;
     height: 700px;
