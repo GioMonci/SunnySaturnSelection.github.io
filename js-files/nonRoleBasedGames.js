@@ -9,6 +9,9 @@ function selectRandomCharacter2(){
 
     let character;
     switch (gameSelect){
+        case "val":
+            character = getRandomCharacterVal();
+            break;
         case "rorr":
             character = getRandomCharacterRORR();
             break;
@@ -33,6 +36,12 @@ function selectRandomCharacter2(){
         alert("No characters available for selected game and role")
     }
 }
+function getRandomCharacterVal(){
+    let characters = ["Brimstone", "Phoenix", "Sage", "Sova", "Viper", "Cypher", "Reyna", "Killjoy", "Breach", "Omen", "Jett", "Raze", "Skye", "Yoru", "Astra", "KAY/O", "Chamber", "Neon", "Fade", "Harbor", "Gekko", "Deadlock", "Iso", "Clove", "Vyse"];
+
+    return characters[Math.floor(Math.random() * characters.length)];
+}
+
 function getRandomCharacterRORR() {
     let characters = ["Commando", "Huntress", "Enforcer", "Bandit", "HAN-D", "Engineer", "Miner", "Sniper", "Acrid", "Mercenary", "Loader", "CHEF", "Pilot", "Artificer", "Drifter"];
 
