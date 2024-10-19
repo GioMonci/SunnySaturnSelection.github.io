@@ -51,7 +51,7 @@ function getRandomCharacterRORR() {
 
 function getRandomCharacterROR2() {
 
-    let characters = ["Commando", "Huntress", "Bandit", "MUL-T", "Engineer", "Artificer", "Mercenary", "Rex", "Loader", "Acrid", "Captain","Rail Gunner", "Void Fiend"];
+    let characters = ["Commando", "Huntress", "Bandit", "MUL-T", "Engineer", "Artificer", "Mercenary", "Rex", "Loader", "Acrid", "Captain","Rail Gunner", "Void Fiend", "Seeker", "False Son", "CHEF"];
 
     return characters[Math.floor(Math.random() * characters.length)];
 }

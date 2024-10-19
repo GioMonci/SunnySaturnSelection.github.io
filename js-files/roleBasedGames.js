@@ -61,9 +61,9 @@ function selectRandomCharacter(){
 }
 function getRandomCharacterOverwatch(role) {
     let tanks = ["Reinhardt", "Winston", "D.Va", "Roadhog", "Orisa", "Sigma", "Wrecking Ball", "Zarya","DoomFist", "JunkerQueen", "Ramattra", "Mauga"];
-    let support = ["Ana", "Baptiste", "Brigitte", "Lucio", "Mercy", "Moira", "Zenyatta", "Illari", "Kiriko", "LifeWeaver"];
+    let support = ["Ana", "Baptiste", "Brigitte", "Lucio", "Mercy", "Moira", "Zenyatta", "Illari", "Kiriko", "LifeWeaver", "Juno"];
     let dps = ["Genji", "Cassidy", "Pharah", "Reaper", "Soldier: 76", "Sombra", "Tracer", "Bastion", "Hanzo", "Junkrat", "Mei", "Torbjörn", "Widowmaker", "Symmetra","Venture", "Ashe", "Echo", "Sojourn"];
-    let allroles = ["Genji", "Cassidy", "Pharah", "Reaper", "Soldier: 76", "Sombra", "Tracer", "Bastion", "Hanzo", "Junkrat", "Mei", "Torbjörn", "Widowmaker", "Symmetra","Venture", "Ashe", "Echo", "Sojourn", "Reinhardt", "Winston", "D.Va", "Roadhog", "Orisa", "Sigma", "Wrecking Ball", "Zarya","DoomFist", "JunkerQueen", "Ramattra", "Mauga","Ana", "Baptiste", "Brigitte", "Lucio", "Mercy", "Moira", "Zenyatta", "Illari", "Kiriko", "LifeWeaver"];
+    let allroles = ["Genji", "Cassidy", "Pharah", "Reaper", "Soldier: 76", "Sombra", "Tracer", "Bastion", "Hanzo", "Junkrat", "Mei", "Torbjörn", "Widowmaker", "Symmetra","Venture", "Ashe", "Echo", "Sojourn", "Reinhardt", "Winston", "D.Va", "Roadhog", "Orisa", "Sigma", "Wrecking Ball", "Zarya","DoomFist", "JunkerQueen", "Ramattra", "Mauga","Ana", "Baptiste", "Brigitte", "Lucio", "Mercy", "Moira", "Zenyatta", "Illari", "Kiriko", "LifeWeaver", "Juno"];
 
     switch (role) {
         case "tank":
