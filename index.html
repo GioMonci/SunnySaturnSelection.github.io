@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <!-- Title -->
+        <title>Sunny Saturn Selection</title>
+        <!-- link attribute -->
+        <link rel="icon" type="image/x-icon" href="/imgs/favicon-32x32.png">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/roleBasedGames.js"></script>
+        <script src="js/nonRoleBasedGames.js"></script>
+        <script src="js/theme.js" defer></script>
+        <!-- Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta http-equiv="refresh" content="86400">
+        <meta name="author" content="Gio M">
+        <meta name="keywords" content="Sunny Saturn Selection">
+        <meta name="description" content="Are you bored of playing the same characters?
+        Sunny Saturn will select random characters from the game your playing to spice up your gaming experience.">
+    </head>
+    <body>
+        <header>
+            <div class="logo-container">
+                <img class="logo" src="imgs/logo.png" alt="logo" id="icon">
+                <div class="logo-text"><p>luminosity</p></div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="html/about.html">Brain Rot</a></li>
+                    <li><a href="html/about.html">About</a></li>
+                </ul>
+            </nav>
+            <a class="Git" href="https://github.com/GioMonci" target="blank"><button>Github</button></a>
+        </header>
+
+        <div class="news-title">
+            <h1>Sunny Saturn's Selection</h1>
+        </div>
+
+        <div class="selector">
+            <label for="game">Select a Role Based Game:</label>
+            <select id="game" onchange="getRoles()">
+                <option value="">Chose A Game</option>
+                <option value="Overwatch">Overwatch 2</option>
+                <option value="Rainbow">Rainbow 6</option>
+            </select>
+
+            <label for="roles">Select a Role:</label>
+            <select id="roles" onchange="">
+                <option value="">Chose A Role</option>
+            </select>
+
+            <button onclick="selectRandomCharacter()">Select a random character</button>
+        </div>
+
+        <div class="selector">
+            <label for="other-game">Select a NON-Role Based Game:</label>
+            <select id="other-game">
+                <option value="">Chose A Game</option>
+                <option value="val">Valorant</option>
+                <option value="rorr">Risk of Rain Returns</option>
+                <option value="ror2">Risk Of Rain 2</option>
+                <option value="gfrb">GunFire Reborn</option>
+                <option value="ggst">Guilt Gear Strive</option>
+            </select>
+            <button onclick="selectRandomCharacter2()">Select a random character</button>
+        </div>
+
+    </body>
+    <footer>
+        <p>Copyright @ SunnySaturn - 2024</p>
+    </footer>
+</html>

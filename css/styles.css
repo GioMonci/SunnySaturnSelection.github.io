@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* all elements */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--primary-color);
+}
+:root{
+    /* Background */
+    --primary-color: #24252A;
+    /* Text */
+    --secondary-color: #edf0f1;
+    /* Button */
+    --third-color: rgba(0,136,169,1);
+    /* Hover button*/
+    --fourth-color: rgba(0,136,169,1);
+    /* Hover text*/
+    --fifth-color: #0088a9;
+}
+
+.light-theme{
+    /* Background */
+    --primary-color: white;
+    /* Text */
+    --secondary-color: black;
+    /* Button */
+    --third-color: rgba(0,136,169,1);
+    /* Hover button*/
+    --fourth-color: rgba(0,136,169,1);
+    /* Hover text*/
+    --fifth-color: #0088a9;
+}
+
+/* Setup font */
+li, a, p, h1, button{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+/* Header / Nav bar section */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+.logo-container{
+    padding-left: 5px;
+    text-align: center;
+}
+.logo{
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+.logo-text{
+    margin: 0 auto;
+}
+.nav-links{
+    list-style: none;
+}
+.nav-links li{
+    display: inline-block;
+    padding: 0 20px;
+}
+.nav-links li a{
+    transition: all 0.3s ease 0s;
+ }
+.nav-links li a:hover{
+    color: var(--fifth-color);
+}
+button{
+    padding: 10px 20px;
+    background-color: var(--third-color);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: var(--fourth-color);
+}
+.news-title{
+    height: auto;
+    margin: 20px auto;
+    text-align: center;
+    font-size:62px;
+    text-decoration: underline;
+    letter-spacing: 1px;
+    padding: 32px;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+}
+.selector{
+    width: 50%; /* Adjust width as needed */
+    padding: 40px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    margin: 50px auto; /* Center the container horizontally */
+    text-align: center;
+}
+.selector label {
+    display: block;
+    margin: 10px auto; /* Center the container horizontally */
+    text-align: center;
+    color:var(--secondary-color);
+}
+
+.selector button{
+    display: block;
+    margin: 20px auto; /* Center the container horizontally */
+    text-align: center;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+    padding: 20px;
+    left: 0;
+    right: 0;
+}
