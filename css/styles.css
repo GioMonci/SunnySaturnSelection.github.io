@@ -120,6 +120,19 @@ button:hover{
     text-align: center;
 }
 
+.iframe-container{
+    width: 60%; /* Adjust width as needed */
+    height: auto;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 auto; /* Center the container horizontally */
+    text-align: center;
+}
+
+iframe{
+    border: 2px solid red;
+    border-radius: 5px;
+}
 footer{
     position: fixed;
     bottom: 0;
