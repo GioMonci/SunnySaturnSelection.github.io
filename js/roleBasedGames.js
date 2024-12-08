@@ -104,7 +104,7 @@ function getRandomCharacterRainbow(role) {
 }
 
 function getRandomCharacterRivals(role){
-    let vanguard = ["Captain America", "Doctor Strange", "Groot", "Hulk", "Peni Parker", "Magneto", "Thor", "Venom"];
+    let vanguard = ["Captain America", "Doctor Strange", "Groot", "Bruce Banner (Hulk)", "Peni Parker", "Magneto", "Thor", "Venom"];
     let duelist = ["Black Panther", "Black Widow", "Hawkeye", "Hela", "Iron Fist", "Iron Man", "Magik", "Moon Knight", "Namor", "Psylocke", "Scarlet Witch", "Spider-Man", "Squirrel Girl", "Star-Lord", "Storm", "The Punisher", "Winter Soldier", "Wolverine"];
     let strategist = ["Adam Warlock", "Cloak and Dagger", "Jeff the Land Shark", "Loki", "Luna Snow", "Mantis", "Rocket Raccoon"];
     let allroles2 = ["Captain America", "Doctor Strange", "Groot", "Hulk", "Peni Parker", "Magneto", "Thor", "Venom", "Black Panther", "Black Widow", "Hawkeye", "Hela", "Iron Fist", "Iron Man", "Magik", "Moon Knight", "Namor", "Psylocke", "Scarlet Witch", "Spider-Man", "Squirrel Girl", "Star-Lord", "Storm", "The Punisher", "Winter Soldier", "Wolverine", "Adam Warlock", "Cloak and Dagger", "Jeff the Land Shark", "Loki", "Luna Snow", "Mantis", "Rocket Raccoon"]
