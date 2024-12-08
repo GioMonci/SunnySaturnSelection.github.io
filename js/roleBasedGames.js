@@ -20,7 +20,7 @@ function getRoles(){
             addOption(roleSelect, "Vanguard", "vanguard");
             addOption(roleSelect, "Duelist", "duelist");
             addOption(roleSelect, "Strategist", "strategist");
-            addOption(roleSelect, "All Roles", "all-roles");
+            addOption(roleSelect, "All-Roles", "all-roles");
             break;
             // add more later
         default:
