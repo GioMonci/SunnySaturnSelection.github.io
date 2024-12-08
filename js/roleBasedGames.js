@@ -16,6 +16,12 @@ function getRoles(){
             addOption(roleSelect, "Attack", "attack");
             addOption(roleSelect, "Defense", "defense")
             break;
+        case "Rivals":
+            addOption(roleSelect, "Vanguard", "vanguard");
+            addOption(roleSelect, "Duelist", "duelist");
+            addOption(roleSelect, "Strategist", "strategist");
+            addOption(roleSelect, "All Roles", "all-roles");
+            break;
             // add more later
         default:
             break;
@@ -45,8 +51,12 @@ function selectRandomCharacter(){
             character = getRandomCharacterOverwatch(roleSelect);
             break;
         case "Rainbow":
-        character = getRandomCharacterRainbow(roleSelect);
-        break;
+            character = getRandomCharacterRainbow(roleSelect);
+            break;
+        case "Rivals":
+            character = getRandomCharacterRivals(roleSelect);
+            break;
+
     default:
         alert("Unsupported Game")
             return;
@@ -93,6 +103,24 @@ function getRandomCharacterRainbow(role) {
     }
 }
 
+function getRandomCharacterRivals(role){
+    let vanguard = ["Captain America", "Doctor Strange", "Groot", "Hulk", "Peni Parker", "Magneto", "Thor", "Venom"];
+    let duelist = ["Black Panther", "Black Widow", "Hawkeye", "Hela", "Iron Fist", "Iron Man", "Magik", "Moon Knight", "Namor", "Psylocke", "Scarlet Witch", "Spider-Man", "Squirrel Girl", "Star-Lord", "Storm", "The Punisher", "Winter Soldier", "Wolverine"];
+    let strategist = ["Adam Warlock", "Cloak and Dagger", "Jeff the Land Shark", "Loki", "Luna Snow", "Mantis", "Rocket Raccoon"];
+    let allroles2 = ["Captain America", "Doctor Strange", "Groot", "Hulk", "Peni Parker", "Magneto", "Thor", "Venom", "Black Panther", "Black Widow", "Hawkeye", "Hela", "Iron Fist", "Iron Man", "Magik", "Moon Knight", "Namor", "Psylocke", "Scarlet Witch", "Spider-Man", "Squirrel Girl", "Star-Lord", "Storm", "The Punisher", "Winter Soldier", "Wolverine", "Adam Warlock", "Cloak and Dagger", "Jeff the Land Shark", "Loki", "Luna Snow", "Mantis", "Rocket Raccoon"]
+    switch (role) {
+        case "vanguard":
+            return getRandomFromArray(vanguard);
+        case "duelist":
+            return getRandomFromArray(duelist);
+        case "strategist":
+            return getRandomFromArray(strategist);
+        case "all-roles":
+            return getRandomFromArray(allroles2);
+        default:
+            return null;
+    }
+}
 function getRandomFromArray(array) {
     return array[Math.floor(Math.random() * array.length)];
 }
