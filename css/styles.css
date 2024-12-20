@@ -157,6 +157,16 @@ iframe{
     border: 2px solid red;
     border-radius: 5px;
 }
+.game-window{
+    width: 45%; /* Adjust width as needed */
+    height: auto;
+    align-content: center;
+    margin: 0 auto; /* Center the container horizontally */
+}
+canvas{
+
+}
+
 footer{
     position: fixed;
     bottom: 0;
