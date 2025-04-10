@@ -9,21 +9,21 @@ function selectRandomCharacter2(){
 
     let character;
     switch (gameSelect){
-        case "val":
-            character = getRandomCharacterVal();
-            break;
-        case "rorr":
-            character = getRandomCharacterRORR();
-            break;
+        //case "val":
+            //character = getRandomCharacterVal();
+            //break;
+        //case "rorr":
+            //character = getRandomCharacterRORR();
+            //break;
         case "ror2":
             character = getRandomCharacterROR2();
             break;
-        case "gfrb":
-            character = getRandomCharacterGFRB();
-            break;
-        case "ggst":
-            character = getRandomCharacterGGST();
-            break;
+        //case "gfrb":
+            //character = getRandomCharacterGFRB();
+            //break;
+        //case "ggst":
+            //character = getRandomCharacterGGST();
+            //break;
         default:
             alert("Unsupported Game")
             return;
