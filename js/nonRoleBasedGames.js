@@ -9,21 +9,21 @@ function selectRandomCharacter2(){
 
     let character;
     switch (gameSelect){
-        //case "val":
-            //character = getRandomCharacterVal();
-            //break;
-        //case "rorr":
-            //character = getRandomCharacterRORR();
-            //break;
+        case "val":
+            character = getRandomCharacterVal();
+            break;
+        case "rorr":
+            character = getRandomCharacterRORR();
+            break;
         case "ror2":
             character = getRandomCharacterROR2();
             break;
-        //case "gfrb":
-            //character = getRandomCharacterGFRB();
-            //break;
-        //case "ggst":
-            //character = getRandomCharacterGGST();
-            //break;
+        case "gfrb":
+            character = getRandomCharacterGFRB();
+            break;
+        case "ggst":
+            character = getRandomCharacterGGST();
+            break;
         default:
             alert("Unsupported Game")
             return;
@@ -37,13 +37,16 @@ function selectRandomCharacter2(){
     }
 }
 function getRandomCharacterVal(){
-    let characters = ["Brimstone", "Phoenix", "Sage", "Sova", "Viper", "Cypher", "Reyna", "Killjoy", "Breach", "Omen", "Jett", "Raze", "Skye", "Yoru", "Astra", "KAY/O", "Chamber", "Neon", "Fade", "Harbor", "Gekko", "Deadlock", "Iso", "Clove", "Vyse"];
+    let characters = ["Brimstone", "Phoenix", "Sage", "Sova", "Viper", "Cypher", "Reyna", 
+        "Killjoy", "Breach", "Omen", "Jett", "Raze", "Skye", "Yoru", "Astra", "KAY/O", 
+        "Chamber", "Neon", "Fade", "Harbor", "Gekko", "Deadlock", "Iso", "Clove", "Vyse"];
 
     return characters[Math.floor(Math.random() * characters.length)];
 }
 
 function getRandomCharacterRORR() {
-    let characters = ["Commando", "Huntress", "Enforcer", "Bandit", "HAN-D", "Engineer", "Miner", "Sniper", "Acrid", "Mercenary", "Loader", "CHEF", "Pilot", "Artificer", "Drifter"];
+    let characters = ["Commando", "Huntress", "Enforcer", "Bandit", "HAN-D", "Engineer", 
+        "Miner", "Sniper", "Acrid", "Mercenary", "Loader", "CHEF", "Pilot", "Artificer", "Drifter"];
 
 
     return characters[Math.floor(Math.random() * characters.length)];
@@ -51,7 +54,8 @@ function getRandomCharacterRORR() {
 
 function getRandomCharacterROR2() {
 
-    let characters = ["Commando", "Huntress", "Bandit", "MUL-T", "Engineer", "Artificer", "Mercenary", "Rex", "Loader", "Acrid", "Captain","Rail Gunner", "Void Fiend", "Seeker", "False Son", "CHEF"];
+    let characters = ["Commando", "Huntress", "Bandit", "MUL-T", "Engineer", "Artificer", "Mercenary", 
+        "Rex", "Loader", "Acrid", "Captain","Rail Gunner", "Void Fiend", "Seeker", "False Son", "CHEF"];
 
     return characters[Math.floor(Math.random() * characters.length)];
 }
@@ -65,7 +69,9 @@ function getRandomCharacterGFRB() {
 
 function getRandomCharacterGGST() {
 
-    let characters = ["SOL", "KY", "MAY", "AXL", "CHIPP", "POTEMKIN", "FAUST", "MILLIA", "ZATO", "RAMLETHAL", "LEO", "NAGORIYUKI", "GIOVANNA", "ANJI", "I-NO", "GOLDLEWIS", "Jack-O'", "HAPPYCHAOS", "BAIKEN", "TESTAMENT", "BRIDGET", "SIN", "BEDMAN?", "ASUKAR♯", "JOHNNY", "ELPHELT", "A.B.A", "SLAYER"];
+    let characters = ["SOL", "KY", "MAY", "AXL", "CHIPP", "POTEMKIN", "FAUST", "MILLIA", "ZATO", "RAMLETHAL", 
+        "LEO", "NAGORIYUKI", "GIOVANNA", "ANJI", "I-NO", "GOLDLEWIS", "Jack-O'", "HAPPYCHAOS", "BAIKEN", "TESTAMENT", 
+        "BRIDGET", "SIN", "BEDMAN?", "ASUKAR♯", "JOHNNY", "ELPHELT", "A.B.A", "SLAYER"];
 
     return characters[Math.floor(Math.random() * characters.length)];
 }
