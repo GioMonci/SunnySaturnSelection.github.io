@@ -201,6 +201,27 @@ article.section-card {
     line-height: 1.6;
 }
 
+/* Splash-text styling */
+#splash {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+    transform-origin: center bottom;
+}
+
+/* bounce keyframes */
+@keyframes splash-bounce {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-8px) rotate(-5deg); }
+}
+
+/* apply the bounce when .bounce class is added */
+#splash.bounce {
+    animation: splash-bounce 0.6s ease-in-out;
+}
+
 footer {
     text-align: center;
     padding: 1.5rem 0;
