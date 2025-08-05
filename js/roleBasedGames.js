@@ -11,7 +11,6 @@ function getRoles(){
             addOption(roleSelect, "DPS", "dps");
             addOption(roleSelect, "Support", "support");
             addOption(roleSelect, "All-Roles", "all-roles");
-            addOption(roleSelect, "SPENSOR", "spensor");
             break;
         case "Rainbow":
             addOption(roleSelect, "Attack", "attack");
@@ -76,16 +75,12 @@ function getRandomCharacterOverwatch(role) {
     let support = ["Ana", "Baptiste", "Brigitte", "Lucio", "Mercy", "Moira", "Zenyatta", "Illari", "Kiriko", 
         "LifeWeaver", "Juno"];
     let dps = ["Genji", "Cassidy", "Pharah", "Reaper", "Soldier: 76", "Sombra", "Tracer", "Bastion", "Hanzo", 
-        "Junkrat", "Mei", "Torbjörn", "Widowmaker", "Symmetra","Venture", "Ashe", "Echo", "Sojourn"];
+        "Junkrat", "Mei", "Torbjörn", "Widowmaker", "Symmetra","Venture", "Ashe", "Echo", "Sojourn", "Freja"];
     let allroles = ["Genji", "Cassidy", "Pharah", "Reaper", "Soldier: 76", "Sombra", "Tracer", "Bastion", "Hanzo", 
         "Junkrat", "Mei", "Torbjörn", "Widowmaker", "Symmetra","Venture", "Ashe", "Echo", "Sojourn", "Reinhardt", 
         "Winston", "D.Va", "Roadhog", "Orisa", "Sigma", "Wrecking Ball", "Zarya","DoomFist", "JunkerQueen", "Ramattra", 
         "Mauga","Ana", "Baptiste", "Brigitte", "Lucio", "Mercy", "Moira", "Zenyatta", "Illari", "Kiriko", "LifeWeaver", 
-        "Juno", "Hazard"];
-    let spensor = ["Reinhardt", "Winston", "D.Va", "JunkerQueen", "Ramattra",
-        "Ana", "Baptiste", "Brigitte", "Zenyatta", "Illari", "Kiriko", "Juno",
-        "Genji", "Cassidy", "Pharah", "Reaper", "Soldier: 76", "Sombra", "Tracer", "Bastion", "Mei","Venture", "Echo", "Sojourn"
-    ]
+        "Juno", "Hazard", "Freja"];
 
     switch (role) {
         case "tank":
@@ -96,8 +91,6 @@ function getRandomCharacterOverwatch(role) {
             return getRandomFromArray(dps);
         case "all-roles":
             return getRandomFromArray(allroles);
-        case "spensor":
-            return getRandomFromArray(spensor)
         default:
             return null;
     }
