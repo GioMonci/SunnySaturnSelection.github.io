@@ -1,8 +1,6 @@
 // list of splashes you want to rotate
 const splashes = [
-    'Updated: Overwatch 2 Season 17',
-    'Surprise Me! ⚡️',
-    'Under Construction 🚧'
+    'OW2 S17 😭'
 ];
 
 let idx = 0;
